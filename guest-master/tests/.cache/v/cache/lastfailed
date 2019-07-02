@@ -1,0 +1,5 @@
+{
+  "interface_test.py::AddEventTest::test_add_event_data_type_error": true,
+  "interface_test.py::AddEventTest::test_add_event_name_exist": true,
+  "interface_test.py::AddEventTest::test_add_event_success": true
+}

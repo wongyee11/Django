@@ -1,0 +1,5 @@
+{
+  "test_HTMLTestRunner.py::TestDemo3::test_fail": true,
+  "test_HTMLTestRunner.py::TestDemo::test_error": true,
+  "test_HTMLTestRunner.py::TestDemo::test_fail": true
+}
