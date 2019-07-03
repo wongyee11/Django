@@ -42,7 +42,7 @@ class AddEventTest(unittest.TestCase):
 
     def test_add_event_success(self):
         ''' 添加成功 '''
-        payload = {'eid':11,'name':'一加4手机发布会','limit':2000,'address':"深圳宝体",'start_time':'2017-05-10 12:00:00'}
+        payload = {'eid':11,'name':'一加4手机发布会','limit':2000,'address':"深圳宝体",'start_time':'2019-07-09 12:00:00'}
         r = requests.post(self.base_url,data=payload)
         result = r.json()
         self.assertEqual(result['status'], 200)
