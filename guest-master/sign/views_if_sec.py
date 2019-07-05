@@ -1,3 +1,4 @@
+# coding=utf-8
 from django.http import JsonResponse
 from sign.models import Event, Guest
 from django.core.exceptions import ObjectDoesNotExist, ValidationError
@@ -5,7 +6,7 @@ from django.contrib import auth as django_auth
 import base64, time
 import hashlib
 from django.http import HttpResponse
-#from Crypto.Cipher import AES    # 请安装 Crypto
+from Cryptodome.Cipher import AES    # 请安装 Crypto
 import json
 
 
@@ -111,7 +112,7 @@ def user_sign(request):
     if sever_sign != client_sign:
         return "sign fail"
     else:
-        return "sign right"
+        return "sign right/success"
 
 
 # 添加发布会接口---增加签名+时间戳
@@ -157,7 +158,7 @@ def add_event(request):
 
 
 #=======AES加密算法===============
-'''
+
 BS = 16
 unpad = lambda s : s[0: - ord(s[-1])]
 
@@ -170,7 +171,7 @@ def decryptAES(src, key):
     """
     src = decryptBase64(src)
     iv = b"1172311105789011"
-    cryptor = AES.new(key, AES.MODE_CBC, iv)
+    cryptor = AES.new(key.encode('utf-8'), AES.MODE_CBC, iv)
     text = cryptor.decrypt(src).decode()
     return unpad(text)
 
@@ -230,4 +231,3 @@ def get_guest_list(request):
             guest['email'] = result.email
             guest['sign'] = result.sign
             return JsonResponse({'status':200, 'message':'success', 'data':guest})
-'''

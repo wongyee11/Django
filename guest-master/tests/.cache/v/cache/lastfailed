@@ -1,4 +1,6 @@
 {
+  "AES_test.py::AESTest::test_case_interface": true,
+  "bug_test.py::AES_Bug_Test::test_aes_interface": true,
   "interface_AES_test.py::AESTest::test_aes_interface": true,
   "interface_AES_test.py::AESTest::test_get_event_list_eid_error": true,
   "interface_AES_test.py::AESTest::test_get_event_list_eid_phone_null": true,
