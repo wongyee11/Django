@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '3ntunl*9r^ntd-&iwbqa+78iqq1n=ho*35!qgr^jgwd4ygl5al'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-#WSGI_APPLICATION = 'guest.wsgi.application'
+WSGI_APPLICATION = 'guest.wsgi.application'
 
 
 # Database
@@ -85,7 +85,7 @@ DATABASES = {
 '''
 
 # MySQL configuration reference
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -99,10 +99,10 @@ DATABASES = {
         #},
     }
 }
-'''
+
 
 #MySQL 测试数据库
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -116,7 +116,7 @@ DATABASES = {
         #},
     }
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
